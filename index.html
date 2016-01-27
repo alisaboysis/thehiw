@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<title>The Home Improvement Warehouse Ltd.</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	
+	<link href="http://fonts.googleapis.com/css?family=Open+Sans rel="stylesheet" type="text/css">
+	<link href="http://fonts.googleapis.com/css?family=Droid+Serif" rel="stylesheet" type="text/css">
+	<!-- Social Media -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+	
+		
+	<style>
+		body {
+			font: 400 14px Open Sans, sans-serif;
+			line-height: 1.8;
+			font-weight: 300;
+			color: #818181;
+		}
+
+
+		h2 {
+			font-size: 31px;
+			font-family: Droid Serif;
+			text-transform: uppercase;
+			color: white;
+			font-weight: 500;
+			margin-bottom: 10px;
+		}
+		
+
+		h4 {
+			font-size: 24px;
+			line-height: 1.375em;
+			color: white;
+			font-weight: 300;
+			margin-bottom: 30px;
+			text-transform: uppercase;	
+		}  
+		
+		h5 {
+			font-size: 18px;
+			line-height: 1.375em;
+			color: white;
+			font-weight: 300;
+			margin-bottom: 10px;
+			text-transform: uppercase;	
+		}
+
+
+		.description {
+			color: white;
+		}
+
+		.jumbotron {
+			background-color: white;
+			color: black;
+			padding: 0;
+			font-family: Droid Serif;
+			line-height: 1.2;	
+			margin-bottom: 10px;
+		}
+
+		.container-fluid {
+			padding: 60px 50px;
+		}
+
+		.bg-grey {
+			background-color: #f6f6f6;
+		}
+
+		.logo-small {
+			color: #f4511e;
+			font-size: 20px;
+		}
+
+		.logo {
+			color: #f4511e;
+			font-size: 100px;
+		}
+
+		.thumbnail {
+			padding: 0 0 15px 0;
+			border: none;
+			border-radius: 0;
+		}
+
+		.thumbnail img {
+			width: 100%;
+			height: 100%;
+			margin-bottom: 10px;
+		}
+		
+		
+		.carousel-control.right, .carousel-control.left {
+			background-image: none;
+			color: #f4511e;
+		}
+
+		.carousel-indicators li {
+			border-color: #f4511e;
+		}
+
+		.carousel-indicators li.active {
+			background-color: #f4511e;
+		}
+
+		.item h4 {
+			font-size: 19px;
+			line-height: 1.375em;
+			font-weight: 400;
+			font-style: italic;
+			margin: 70px 0;
+		}
+
+		.item span {
+			font-style: normal;
+		}
+
+		.panel {
+			border: 1px solid #f4511e; 
+			border-radius:0 !important;
+			transition: box-shadow 0.5s;
+		}
+
+		.panel:hover {
+			box-shadow: 5px 0px 40px rgba(0,0,0, .2);
+		}
+
+		.panel-footer .btn:hover {
+			border: 1px solid #f4511e;
+			background-color: #fff !important;
+			color: #f4511e;
+		}
+
+		.panel-heading {
+			color: #fff !important;
+			background-color: #f4511e !important;
+			padding: 25px;
+			border-bottom: 1px solid transparent;
+			border-top-left-radius: 0px;
+			border-top-right-radius: 0px;
+			border-bottom-left-radius: 0px;
+			border-bottom-right-radius: 0px;
+		}
+
+		.panel-footer {
+			background-color: white !important;
+		}
+
+		.panel-footer h3 {
+			font-size: 32px;
+		}
+
+		.panel-footer h4 {
+			color: #aaa;
+			font-size: 14px;
+		}
+
+		.panel-footer .btn {
+			margin: 15px 0;
+			background-color: #f4511e;
+			color: #fff;
+		}
+
+		.navbar {
+			margin-bottom: 0;
+			background-color: #ffcb2b;
+			z-index: 9999;
+			border: 0;
+			font-size: 12px !important;
+			line-height: 1.42857143 !important;
+			letter-spacing: 4px;
+			border-radius: 0;
+			font-family: Open Sans, sans-serif;
+		}
+
+		.navbar .navbar-nav {
+			display: inline-block;
+			float: none;
+			vertical-align: top;
+		}
+
+		.navbar .navbar-collapse {
+			text-align: center;
+		}
+		
+		.navbar li a, .navbar .navbar-brand {
+			color: #0c1e31 !important;
+		}
+
+		.navbar-nav li a:hover, .navbar-nav li.active a {
+			color: #0c1e31 !important;
+			background-color: #ffcb2b !important;
+			font-weight: 600;
+		}
+
+		.navbar-default .navbar-toggle {
+			border-color: transparent;
+			color: #fff !important;
+		}
+		
+		#landing {
+			padding: 20px 0;
+		}
+				
+		#products {
+			background-color: #0c1e31;
+			color: white;
+		}
+
+		.description a {
+			color: #4fc3ff;
+			font-weight: 500;
+			text-decoration: underline;
+		}
+		
+		.description a:hover {
+			color: #4fc3ff;
+			font-weight: 500;
+			text-decoration: none;
+		}
+
+		.row .col-md-12 .col-lg-12 .col-sm-12 {
+			width:100%;
+			display: block;
+			height: 500px;
+		}
+
+
+		#intro { 
+		    background: url(images/counter.png) 50% 0 fixed; 
+		    height: auto;  
+		    margin: 0; 
+		    width: 100%; 
+		    position: relative;
+		    box-shadow: 0 0 30px rgba(0,0,0,0.5);
+		}
+		
+
+		#contact { 
+			background: url(images/homedecor.png) 50% 0 fixed; 
+			height: auto;  
+			margin: 0 auto; 
+			width: 100%; 
+			position: relative; 
+			box-shadow: 0 0 30px rgba(0,0,0,0.5);
+		}
+		
+		#contactinfo { 
+			padding: 20px 0; 
+		}
+
+		.map-responsive{
+			overflow:hidden;
+			position:relative;
+			height:300px;
+			}
+
+		.map-responsive iframe{
+			left:0;
+			top:0;
+			width:100%;
+			height:300px;
+			position:absolute;
+		}
+		
+		
+		footer .glyphicon {
+			font-size: 20px;
+			margin-bottom: 20px;
+			color: #f4511e;
+		}
+		
+		#helplinks { 
+			background: url(images/livingroom.png) 80% 0 fixed; 
+			height: auto;
+			margin: 0 auto; 
+			width: 100%; 
+			position: relative; 
+			box-shadow: 0 0 30px rgba(0,0,0,0.5);
+		}
+
+		#companyinfo {
+			text-align:left;
+		}
+
+		#companyinfo a {
+			color: #4fc3ff;
+			font-weight: 500;
+			text-decoration: underline;
+		}
+		
+		#companyinfo a:hover {
+			color: #4fc3ff;
+			font-weight: 500;
+			text-decoration: none;
+		}
+
+		.slideanim {visibility:hidden;}
+
+		.slide {
+			animation-name: slide;
+			-webkit-animation-name: slide;	
+			animation-duration: 1s;	
+			-webkit-animation-duration: 1s;
+			visibility: visible;			
+		}
+		
+		.blur {
+			color: 0c1e31;
+		}
+		
+		.transbox {
+			background-color: rgba(12, 30, 49, 0.9);
+		}
+		
+		#email {
+			border: 1px dotted #4fc3ff; 
+			border-style: none none dotted;
+			text-decoration: none; 
+			}
+			
+		.btn-map {
+			border-radius: 0;
+		}
+		
+		.btn .caret {
+			margin:0 10px;
+		}
+		
+		#companyinfo ul {
+			padding:0;
+		}
+		
+		.helplinks li {
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+		}
+		
+		.social-icon {
+			padding: 0 5px 0 0;
+		}
+		
+		#helplinks .form-control {
+			width:250px;
+			margin:10px 0;
+		}
+		
+
+		@keyframes slide {
+			0% {
+				opacity: 0;
+				-webkit-transform: translateY(70%);
+			} 
+
+			100% {
+				opacity: 1;
+				-webkit-transform: translateY(0%);
+			}	
+		}
+
+		@-webkit-keyframes slide {
+			0% {
+				opacity: 0;
+				-webkit-transform: translateY(70%);
+			} 
+
+			100% {
+				opacity: 1;
+				-webkit-transform: translateY(0%);
+			}
+		}
+
+		@media screen and (max-width: 768px) {
+			.col-sm-4 {
+				text-align: center;
+				margin: 25px 0;
+			}
+			
+			.col-sm-6 {
+				text-align: center;
+				margin: 25px 0;
+			}
+
+			.btn-lg {
+				width: 100%;
+				margin-bottom: 35px;
+			}
+		}
+
+		@media screen and (max-width: 480px) {
+			.logo {
+				font-size: 50px;
+			}
+			.logo-img {
+				max-width:40%;
+			}
+			.jumbotron {
+				padding-top:10px;
+			}
+		}
+		
+	</style>
+
+</head>
+
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+
+<!-- Header -->
+<section class="jumbotron text-center">
+	<a class="logo" href="http://www.hiw.build/">
+		<img class="logo-img" src="images/logo.png" alt="The Home Improvement Warehouse Ltd." />
+	</a> 
+</section>
+
+
+<!-- Navigation -->
+<nav id="myNav" class="navbar navbar-default center" role="navigation">
+	<div class="container">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>                        
+			</button>
+		</div>
+
+		<div class="collapse navbar-collapse" id="myNavbar">
+			<ul class="nav navbar-nav">
+				<li><a href="#products">PRODUCTS</a></li>
+				<li><a href="#services">SERVICES</a></li>
+				<li><a href="#deals">DEALS</a></li>
+				<li><a href="#contact">CONTACT US</a></li>
+			</ul>
+		</div>	
+	</div>
+</nav>
+
+
+<!-- Landing Content -->
+<section id="landing">	
+	<div class="container">
+		<div class="col-sm-8">
+			<div id="myCarousel" class="carousel slide" data-ride="carousel">
+				
+				<!-- Indicators -->
+				<ol class="carousel-indicators">
+					<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+					<li data-target="#myCarousel" data-slide-to="1"></li>
+				</ol>
+
+				<!-- Wrapper for slides -->
+				<div class="carousel-inner" role="listbox">
+					<div class="item active">
+						<img class="img-landing" src="images/kitchendesign.png" alt="Kitchen Design Calgary" />
+						
+						<div class="carousel-caption">
+							<h3>Sell $</h3>
+							<p>Money Money.</p>
+						</div>      
+					</div>
+
+					<div class="item">
+						<img class="img-landing" src="images/entrancedoor.png" alt="Exterior Door" />
+						
+						<div class="carousel-caption">
+							<h3>More Sell $</h3>
+							<p>Lorem ipsum...</p>
+						</div>      
+					</div>
+				</div>
+
+				<!-- Left and right controls -->
+				<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+					<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+					<span class="sr-only">Previous</span>
+				</a>
+
+				<a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+					<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+					<span class="sr-only">Next</span>
+				</a>
+			</div>
+		</div>
+
+		<div class="col-sm-4">
+			<div>
+				<img class="img-responsive" src="images/adbanner1.png" alt="Client Ad" />
+			</div>
+				<hr>
+			<div>
+				<img class="img-responsive" src="images/adbanner2.png" alt="Client Ad" />
+			</div>
+		</div>
+	</div>
+</section>
+
+
+<!-- Products -->
+<section id="products" class="container-fluid text-center">
+	<h2>PRODUCTS</h2>
+	<br>
+
+	<div class="row slideanim">
+		<div class="col-sm-4">
+			<p><a href="#products"><img class="img-responsive" src="images/doors.png" alt="Doors" /></a></p>
+		</div>
+		
+		<div class="col-sm-4">
+			<p><a href="#flooring"><img class="img-responsive" src="images/flooring.png" alt="Flooring" /></a></p>
+		</div>
+		
+		<div class="col-sm-4">
+			<p><a href="#moulding"><img class="img-responsive" src="images/moulding.png" alt="Moulding" /></a></p>
+		</div>
+	</div>
+	<br><br>
+	
+	<div class="row slideanim">
+		<div class="col-sm-4">
+			<p><a href="#paint"><img class="img-responsive" src="images/paint.png" alt="Paint" /></a></p>
+		</div>
+		
+		<div class="col-sm-4">
+			<p><a href="#kitchen-and-bath"><img class="img-responsive" src="images/kitchen_bath.png" alt="Kitchen and Bath" /></a></p>
+		</div>
+		
+		<div class="col-sm-4">
+			<p><a href="#plumbing"><img class="img-responsive" src="images/plumbing.png" alt="Plumbing" /></a></p>
+		</div>
+	</div>
+</section>
+
+
+<!-- Services -->
+<section id="intro" data-speed="6" data-type="background">	
+	<div class="text-center transbox">			
+		<div id="services" class="container-fluid text-center row">
+			<h2>Services</h2>
+			<br>
+			<div class="row slideanim">
+				<div class="col-sm-6">
+					<span class="glyphicon logo-small"><img class="img-responsive" src="images/door_icon.png" alt="Doors Installation" /></span>
+					<h4>Installations</h4>
+					<br>
+					<p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. <a class="textlink">Learn more</a></p>
+					<br>
+				</div>
+		
+				<div class="col-sm-6">
+					<span class="glyphicon logo-small"><img class="img-responsive" src="images/tools_icon.png" alt="Renovations" /></span>
+					<h4>Renovations</h4>
+					<br>
+					<p class="description">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. <a>Learn more</a></p>
+					<br>
+				</div>
+			</div>
+	
+		</div>
+	</div>
+</section>
+
+
+
+
+<!-- Deals -->
+<section id="deals" class="container-fluid text-center">
+	
+	<div class="row slideanim">
+		<div class="col-sm-4">
+			<p><img class="img-responsive" src="images/deal1.png" alt="10% Off Kitchen Cabinets" /></p>
+		</div>
+		
+		<div class="col-sm-4">
+			<p><img class="img-responsive" src="images/deal2.png" alt="Vinyl Tile Clearance" /></p>
+		</div>
+		
+		<div class="col-sm-4">
+			<p><img class="img-responsive" src="images/deal3.png" alt="New Arrivals Doors Calgary" /></p>
+		</div>
+	</div>
+	<br><br>
+</section>
+
+
+<!-- Contact Us -->
+<section id="contact" data-speed="6" data-type="background">	
+	<div class="text-center transbox">			
+		<div id="contactus" class="container-fluid text-center row">
+			<h2>Contact Us</h2>
+			<br>
+			<div id="contactinfo" class="row slideanim">
+						
+				<div class="col-sm-3">
+					<span class="glyphicon logo-small"><img class="img-responsive" src="images/locationpin.png" alt="Calgary Location" /></span>
+					<p class="description">2620 Centre Ave NE Calgary, AB T2A 2L3</p>
+					<br>
+				</div>
+		
+				<div class="col-sm-3">
+					<span class="glyphicon logo-small"><img class="img-responsive" src="images/mailicon.png" alt="Email Address" /></span>
+					<p class="description"><a id="email" href="mailto:alisa.boysis@gmail.com">info@hiw.build</a></p>
+					<br>
+				</div>
+				
+				<div class="col-sm-3">
+					<span class="glyphicon logo-small"><img class="img-responsive" src="images/phoneicon.png" alt="Phone Number" /></span>
+					<p class="description">(403) 248-7333</p>
+					<br>
+				</div>
+		
+				<div class="col-sm-3">
+					<span class="glyphicon logo-small"><img class="img-responsive" src="images/clockicon.png" alt="Hours of Operation" /></span>
+					<p class="description">Monday–Friday: 8:00 AM – 6:00 PM
+					<br>Saturday: 9:00 AM – 5:30 PM
+					<br>Sunday: Closed</p>
+					<br>
+				</div>
+				
+			</div>
+	
+		</div>
+	</div>
+</section>
+
+
+
+<!-- Google Maps -->
+<section id="location-map">
+	<button type="button" class="btn btn-primary btn-lg btn-block btn-map" data-toggle="collapse" data-target=".map-responsive"><h5>Location on map  <span class="caret"></span></h5></button>
+
+	<div class="map-responsive collapse">
+		<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10032.091612105407!2d-113.9971273!3d51.0526649!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb25ade5e99c2f06c!2sHome+Improvement+Warehouse+Ltd!5e0!3m2!1sen!2sca!4v1453325203149" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+	</div>
+</section>
+
+
+
+<!-- Footer Content -->
+<section id="helplinks" data-speed="8" data-type="background">	
+	<div class="text-center transbox">			
+		<div id="companyinfo" class="container-fluid text-center row">
+			<div class="row slideanim">
+						
+				<div class="col-sm-3">
+					<h5>Customer Assistance</h5>
+					<ul class="helplinks">
+						<li><a>Return Policy</a></li>
+						<li><a class="textlink">FAQ</a></li>
+						<li><a class="textlink">Unsubscribe from Email</a></li>
+						<li><a class="textlink">Survey</a></li>
+						<li><a class="textlink">Gift Cards</a></li>
+					</ul>
+					<br>
+				</div>
+		
+				<div class="col-sm-3">
+					<h5>Company Info</h5>
+					<ul class="helplinks">
+						<li><a class="textlink">About the Company</a></li>
+						<li><a class="textlink">Suppliers</a></li>
+						<li><a class="textlink">Careers</a></li>
+						<li><a class="textlink">Privacy and Terms of Use</a></li>
+						<li><a class="textlink">Site Map</a></li>
+					</p>
+					<br>
+				</div>
+				
+				<div class="col-sm-3">
+					<h5>Social Media</h5>
+					<a class="social-icon" href="#"><i class="fa fa-facebook fa-lg"></i></a>
+					<a class="social-icon" href="#"><i class="fa fa-twitter fa-lg"></i></a>
+					<a class="social-icon" href="#"><i class="fa fa-pinterest fa-lg"></i></a>
+					<a class="social-icon" href="#"><i class="fa fa-houzz fa-lg"></i></a>
+					<a class="social-icon" href="#"><i class="fa fa-instagram fa-lg"></i></a>
+					<a class="social-icon" href="#"><i class="fa fa-linkedin fa-lg"></i></a>
+					<a class="social-icon" href="#"><i class="fa fa-youtube fa-lg"></i></a>
+					<br>
+				</div>
+		
+				<div class="col-sm-3">
+					<h5>Newsletter</h5>
+					<form class="form-inline">
+						<input type="email" class="form-control" placeholder="Enter Your Email" required>
+						<button type="button" class="btn btn-warning">Subscribe</button>
+					</form>
+				</div>
+				
+			</div>
+	
+		</div>
+	</div>
+</section>
+
+
+
+<footer class="container-fluid text-center">
+	<a href="#myPage" title="To Top">
+		<span class="glyphicon glyphicon-chevron-up"></span>
+	</a>
+	
+	<p>Copyright © The Home Improvement Warehouse Ltd. 2005–2016</p>		
+</footer>
+
+
+
+<script>
+$(document).ready(function(){
+	// Add smooth scrolling to all links in navbar + footer link
+	$(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+
+		// Prevent default anchor click behavior
+		event.preventDefault();
+
+		// Store hash
+		var hash = this.hash;
+
+		// Using jQuery's animate() method to add smooth page scroll
+		
+		// The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+		$('html, body').animate({
+		scrollTop: $(hash).offset().top
+		}, 900, function(){
+
+			// Add hash (#) to URL when done scrolling (default click behavior)
+			window.location.hash = hash;
+		});
+	});
+
+
+	// Slide in elements on scroll
+	$(window).scroll(function() {
+		$(".slideanim").each(function(){
+			var pos = $(this).offset().top;
+			var winTop = $(window).scrollTop();
+			if (pos < winTop + 600) {
+			$(this).addClass("slide");
+			}
+		});
+	});
+	
+	
+	//Navigation to stick to top
+	var headerHeight = 200;
+
+	$(window).bind('scroll', function () {
+	if ($(window).scrollTop() > headerHeight) {
+	    $('#myNav').removeClass('navbar-top');
+	    $('#myNav').addClass('navbar-fixed-top');
+	} else {
+	    $('#myNav').removeClass('navbar-fixed-top');
+	    $('#myNav').addClass('navbar-top');
+	}
+	});
+})
+ 
+	//Parallax
+	$(document).ready(function(){
+		// cache the window object
+		$window = $(window);
+	$('section[data-type="background"]').each(function(){
+		// declare the variable to affect the defined data-type
+		var $scroll = $(this);
+		             
+		$(window).scroll(function() {
+			// HTML5 proves useful for helping with creating JS functions!
+			// also, negative value because we're scrolling upwards                             
+			var yPos = -($window.scrollTop() / $scroll.data('speed')); 
+         
+			// background position
+			var coords = '100% '+ yPos + 'px';
+	 
+			// move the background
+			$scroll.css({ backgroundPosition: coords });    
+		}); // end window scroll
+	});  // end section function
+}); // close out script
+
+document.createElement("section"); //for older IE versions
+
+</script>
+
+</body>
+</html>
